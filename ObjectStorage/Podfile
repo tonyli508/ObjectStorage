@@ -10,7 +10,7 @@ target 'ObjectStorage' do
   target 'ObjectStorageTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'ObjectMapper', '~> 1.4.0'
+    pod 'ObjectMapper', '~> 1.3.0'
   end
 
 end
