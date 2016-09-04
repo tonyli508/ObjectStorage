@@ -44,7 +44,9 @@ pod 'LiObjectStorage', '~> 0.1.1'
 
 ## Carthage
 
-To be implemented.
+```ruby
+github "tonyli508/ObjectStorage", "~> 0.1.1"
+```
 
 ## TODOs
 - Simplify Model Protocol.
