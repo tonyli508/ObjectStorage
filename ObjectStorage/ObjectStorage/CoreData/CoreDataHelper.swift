@@ -7,7 +7,6 @@
 //
 
 import CoreData
-import UIKit
 
 class CoreDataHelper: NSObject{
     
