@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="ContactAddress" syncable="YES">
+        <attribute name="addr1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="addr2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postalCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DriverLicense" representedClassName="PRODUCT_MODULE_NAME.DriverLicense" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfExpiry" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="licenseNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="licenseState" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserProfile" representedClassName="PRODUCT_MODULE_NAME.UserProfile" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countryCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validations" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="contactAddresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ContactAddress" syncable="YES"/>
+        <relationship name="driverLicense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DriverLicense" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserProfile" positionX="-749" positionY="180" width="128" height="253"/>
+        <element name="DriverLicense" positionX="-407" positionY="261" width="128" height="163"/>
+        <element name="ContactAddress" positionX="-558" positionY="92" width="128" height="133"/>
+    </elements>
+</model>

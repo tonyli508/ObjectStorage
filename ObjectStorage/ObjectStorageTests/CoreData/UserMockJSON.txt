@@ -1,0 +1,16 @@
+{
+    "userId": "id01234567",
+    "token": "token",
+    "firstName": "firstName",
+    "lastName": "lastName",
+    "photoUrl": "photoUrl",
+    "email": "email",
+    "jobTitle": "jobTitle",
+    "company": "company",
+    "countryCode": "countryCode",
+    "phoneNumber": "phoneNumber",
+    "middleName": "middleName",
+    "dateOfBirth": "dateOfBirth",
+    "driverLicenseState": "driverLicenseState",
+    "driverLicenseNumber": "driverLicenseNumber"
+}
