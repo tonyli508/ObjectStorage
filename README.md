@@ -16,7 +16,7 @@ ObjectStorage is a framework that make CRUD works on your model entities, you ma
 
 Best thing to do is have a look at ObjectStorageTests.
 
-- Make your model conform to Model protocol, I suggest you create a base class for that, take a look at MappableModel in ObjectStorageTests folder.
+1. Make your model conform to Model protocol, I suggest you create a base class for that, take a look at MappableModel in ObjectStorageTests folder.
 ```swift
 class UserProfile: Model
 ```
@@ -25,13 +25,17 @@ Most import for CoreData is set up your ModelIdentifier in your model.
 public typealias ModelIdentifier = (modelName: String, keys: [String], values: [String?])
 ```
 modelName is the CoreData model name, keys and values will use for CoreData queries.
-- Create StorageProviderService instance
+2. Create StorageProviderService instance
 ```swift
 let storageProvider = StorageProviderService(coreDataModelFileName: "Model")
 ```
-- Then CRUD your model
+3. Then CRUD your model
 ```swift
-storageProvider.create(UserProfile(firstName: 'Jiantang', lastName: 'Li'))
+let profile = UserProfile(firstName: 'Jiantang', lastName: 'Li')
+storageProvider.create(profile)
+storageProvider.update(profile)
+let read = storageProvider.read(profile)
+storageProvider.delete(profile)
 ``` 
 
 ## CocoaPods
