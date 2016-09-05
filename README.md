@@ -20,11 +20,12 @@ Best thing to do is have a look at ObjectStorageTests.
 ```swift
 class UserProfile: Model
 ```
-Most import for CoreData is set up your ModelIdentifier in your model.
+	Most import for CoreData is set up your ModelIdentifier in your model.
 ```swift
 public typealias ModelIdentifier = (modelName: String, keys: [String], values: [String?])
 ```
-modelName is the CoreData model name, keys and values will use for CoreData queries.
+	modelName is the CoreData model name, keys and values will use for CoreData queries.
+	
 2. Create StorageProviderService instance
 ```swift
 let storageProvider = StorageProviderService(coreDataModelFileName: "Model")
