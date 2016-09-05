@@ -38,10 +38,15 @@ class CoreDataStore {
         guard let url = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).last else {
             fatalError("Can't found user docuemnt directory.")
         }
+        print("Application Doucment Directory url: \(url)")
         return NSURL(fileURLWithPath: url)
     }()
     
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
+        // if is running unit tests we use NSInMemoryStoreType
+        let isRunningUnitTests = NSClassFromString("XCTest") != nil
+        let storeType = isRunningUnitTests ? NSInMemoryStoreType : NSSQLiteStoreType
+        
         // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
@@ -51,7 +56,7 @@ class CoreDataStore {
             NSInferMappingModelAutomaticallyOption: true]
         
         do {
-            try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: mOptions)
+            try coordinator!.addPersistentStoreWithType(storeType, configuration: nil, URL: url, options: mOptions)
         } catch {
             coordinator = nil
             // TODO:: Replace this with code to handle the error appropriately.
