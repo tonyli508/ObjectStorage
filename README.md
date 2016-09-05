@@ -3,7 +3,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/LiObjectStorage.svg)](https://github.com/tonyli508/ObjectStorage.git)
 [![Build Status](https://travis-ci.org/tonyli508/ObjectStorage.svg?branch=master)](https://travis-ci.org/tonyli508/ObjectStorage)
 
-ObjectStorage is a framework that make CURD works on your model entities, you may choose what storage you want e.g. Sqlite, CoreData, plist...
+ObjectStorage is a framework that make CRUD works on your model entities, you may choose what storage you want e.g. Sqlite, CoreData, plist...
 
 ## Current Support
 - [x] CoreData
@@ -29,7 +29,7 @@ modelName is the CoreData model name, keys and values will use for CoreData quer
 ```swift
 let storageProvider = StorageProviderService(coreDataModelFileName: "Model")
 ```
-- Then CURD your model
+- Then CRUD your model
 ```swift
 storageProvider.create(UserProfile(firstName: 'Jiantang', lastName: 'Li'))
 ``` 
